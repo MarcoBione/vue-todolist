@@ -36,6 +36,10 @@ createApp({
         },
         removeItems(index) {
             this.toDoList.splice(index, 1);
+        },
+        checkedItems(index){
+            this.toDoList[index].done = "true";
+            console.log(this.toDoList[index]);
         }
     }
 }).mount('#app');

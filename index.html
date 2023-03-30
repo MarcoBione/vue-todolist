@@ -40,10 +40,10 @@
 
                 <ul v-if="toDoList.length > 0" class="list-group">
 
-                    <li v-for="(listItems, index) in toDoList" :key="index" class="list-group-item d-flex justify-content-between">
+                    <li v-for="(listItems, index) in toDoList" :key="index" class="list-group-item d-flex justify-content-between fw-semibold" :class="{'_mychecked' : listItems.done}">
 
                         <!-- text -->
-                        <span>{{ listItems.text }}</span>
+                        <span :class="{'_mychecked' : listItems.done}">{{ listItems.text }}</span>
 
                         <!-- control buttons -->
                         <div class="buttons">
