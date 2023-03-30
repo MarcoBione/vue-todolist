@@ -23,7 +23,7 @@
             <div class="textinput">
 
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Inserisci elemento">
                     <button class="btn btn-outline-success"><i class="fa-solid fa-plus"></i></button>
                   </div>
                 
@@ -33,6 +33,14 @@
             <!-- display list area -->
             <div class="textlist">
                 
+                <ul>
+                    <li v-for="listItems, index in toDoList" :key:index>
+                        <span>{{ listItems.text }}</span>
+                        <button class="btn btn-outline-success"><i class="fa-solid fa-check"></i></i></button>
+                        <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
+                    </li>
+                </ul>
+
             </div>
             <!-- display list area -->
         </div>
