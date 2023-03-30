@@ -34,7 +34,7 @@
             <div class="textlist">
                 
                 <ul>
-                    <li v-for="listItems, index in toDoList" :key:index>
+                    <li v-for="(listItems, index) in toDoList" :key="index">
                         <span>{{ listItems.text }}</span>
                         <button class="btn btn-outline-success"><i class="fa-solid fa-check"></i></i></button>
                         <button class="btn btn-outline-danger"><i class="fa-solid fa-trash"></i></button>
