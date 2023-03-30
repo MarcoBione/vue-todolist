@@ -31,7 +31,7 @@ createApp({
                 done: false
             }
             this.toDoList.push(newItem);
-
+            //reset input text
             this.text = "";
         },
         removeItems(index) {
