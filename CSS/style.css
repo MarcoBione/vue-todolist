@@ -1,5 +1,35 @@
-._mychecked{
+* {
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --floral-white: #fffcf2ff;
+    --timberwolf: #ccc5b9ff;
+    --black-olive: #403d39ff;
+    --eerie-black: #252422ff;
+    --flame: #eb5e28ff;
+}
+
+._myapp {
+    background-color: var(--floral-white);
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+._mytitle{
+    color: var(--flame);
+    text-align: center;
+    font-weight: 600;
+}
+
+._mychecked {
     text-decoration: line-through;
     background-color: darkgreen;
     color: aliceblue;
+}
+
+h6{
+    color: var(--flame);
+    opacity: 50%;
 }

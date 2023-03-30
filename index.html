@@ -15,21 +15,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div id="app">
+    <div id="app" class="_myapp">
 
-        <div class="container">
+        <div class="container p-5">
+
+            <h1 class="_mytitle">Crea la tua lista</h1>
 
             <!-- input text area -->
-            <div class="textinput">
+            <div class="_mytextinput">
 
                 <div class="input-group mb-3">
-                    <input type="text" v-model="text" @keyup.enter="inserisci" class="form-control" placeholder="Inserisci elemento">
-                    <button class="btn btn-outline-success" @click="addItems()"><i class="fa-solid fa-plus"></i></button>
+                    <input type="text" v-model="text" @keyup.enter="inserisci" class="form-control bg-transparent"
+                        placeholder="Inserisci elemento">
+                    <button class="btn btn-outline-success" @click="addItems()"><i
+                            class="fa-solid fa-plus"></i></button>
                 </div>
 
             </div>
@@ -40,7 +47,9 @@
 
                 <ul v-if="toDoList.length > 0" class="list-group">
 
-                    <li v-for="(listItems, index) in toDoList" :key="index" class="list-group-item d-flex justify-content-between fw-semibold" :class="{'_mychecked' : listItems.done}">
+                    <li v-for="(listItems, index) in toDoList" :key="index"
+                        class="list-group-item d-flex justify-content-between fw-semibold align-items-center"
+                        :class="{'_mychecked' : listItems.done}">
 
                         <!-- text -->
                         <span :class="{'_mychecked' : listItems.done}">{{ listItems.text }}</span>
@@ -48,16 +57,18 @@
                         <!-- control buttons -->
                         <div class="buttons">
                             <!-- compleate -->
-                            <button class="btn btn-outline-success" @click="checkedItems(index)"><i class="fa-solid fa-check"></i></i></button>
+                            <button class="btn btn-outline-success" @click="checkedItems(index)"><i
+                                    class="fa-solid fa-check"></i></i></button>
                             <!-- delete -->
-                            <button class="btn btn-outline-danger" @click="removeItems(index)"><i class="fa-solid fa-trash"></i></button>
+                            <button class="btn btn-outline-danger" @click="removeItems(index)"><i
+                                    class="fa-solid fa-trash"></i></button>
                         </div>
 
                     </li>
 
                 </ul>
 
-                <h6 v-else>Aggiungi un elemento per visualizzarlo in lista</h6>
+                <h6 v-else class="text-center">Aggiungi un elemento per visualizzarlo in lista</h6>
 
             </div>
             <!-- display list area -->
