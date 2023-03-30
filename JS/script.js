@@ -1,8 +1,8 @@
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
-    data(){
-        return{
+    data() {
+        return {
 
             toDoList: [
                 {
@@ -20,23 +20,22 @@ createApp({
                 {
                     text: 'item4',
                     done: false
-                },                
-            ]            
+                },
+            ]
         }
     },
-    methods:{
-        addItems(){
-            if (this.text) { 
-                const newItem = { 
-                    name: this.text, 
-                    done: false 
-                } 
-                this.toDoList.push(newItem); 
-            } 
-            this.text = ""; 
+    methods: {
+        addItems() {
+            const newItem = {
+                text: this.text,
+                done: false
+            }
+            this.toDoList.push(newItem);
+
+            this.text = "";
         },
-        removeItems(index){
-             this.toDoList.splice(index,1);
+        removeItems(index) {
+            this.toDoList.splice(index, 1);
         }
     }
 }).mount('#app');
