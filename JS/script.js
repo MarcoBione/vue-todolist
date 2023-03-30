@@ -28,4 +28,4 @@ createApp({
     methods:{
 
     }
-}).mounted('#app');
+}).mount('#app');
