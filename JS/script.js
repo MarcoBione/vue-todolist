@@ -20,10 +20,8 @@ createApp({
                 {
                     text: 'item4',
                     done: false
-                }
-                
-            ]
-            
+                },                
+            ]            
         }
     },
     methods:{
