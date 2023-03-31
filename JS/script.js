@@ -11,7 +11,7 @@ createApp({
     },
     methods: {
         addItems() {
-            if(this.text.length > 1){
+            if(this.text.length > 0){
 
                 const newItem = {
                     text: this.text,
