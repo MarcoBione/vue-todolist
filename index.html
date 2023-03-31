@@ -34,7 +34,7 @@
 
                 <div class="input-group mb-3">
                     <input type="text" v-model="text" @keyup.enter="addItems()" class="form-control bg-transparent shadow-none"
-                        placeholder="Inserisci elemento">
+                        placeholder="Inserisci elemento" required>
                     <button class="btn btn-outline-success" @click="addItems()"><i
                             class="fa-solid fa-plus"></i></button>
                 </div>
@@ -68,7 +68,7 @@
 
                 </ul>
 
-                <h6 v-else class="text-center">Aggiungi un elemento per visualizzarlo in lista</h6>
+                <h6 v-else class="text-center">Mmmh tutto troppo tranquillo, aggiungi qualcosa da fare!</h6>
 
             </div>
             <!-- display list area -->

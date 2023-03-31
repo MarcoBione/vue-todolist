@@ -11,20 +11,23 @@ createApp({
     },
     methods: {
         addItems() {
-            const newItem = {
-                text: this.text,
-                done: false
-            }
-            this.toDoList.push(newItem);
-            //reset input text
-            this.text = "";
+            if(this.text.length > 1){
+
+                const newItem = {
+                    text: this.text,
+                    done: false
+                }
+                this.toDoList.push(newItem);
+                //reset input text
+                this.text = "";
+            }            
         },
         removeItems(index) {
             this.toDoList.splice(index, 1);
         },
-        checkedItems(index){
-            this.toDoList[index].done = "true";
-            console.log(this.toDoList[index]);
-        }
+        //checkedItems(index){
+            //this.toDoList[index].done = "true";
+           //console.log(this.toDoList[index]);
+        //}
     }
 }).mount('#app');
